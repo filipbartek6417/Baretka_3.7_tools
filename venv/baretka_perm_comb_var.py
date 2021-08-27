@@ -1,3 +1,6 @@
+# Disclaimer: The comments below are just my observations
+# Do not consider them as verified justifications for respective algorithm's efficiency
+
 def permutations(n):
     return variations(n, len(n))
 
@@ -14,6 +17,9 @@ def variations(n, k=2):
 
 def repeating_variations(n, k=2):
     return master_function(n, True, False, [], k)
+
+# Since all the algorithms behave similarly, it is possible by having 2 flags in the call
+# to compute all of them by using a master function
 
 def master_function(n, repeating, combination, return_list, k=2, current=''):
     if k == 0:
